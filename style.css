@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.wrapper{
+   
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(236, 235, 235);
+    display: grid;
+  grid-template-rows: 56px 1fr;
+  grid-template-columns: 375px 630px 375px;
+  grid-template-areas: 
+  "nav nav nav "
+  "left main right";
+
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 56px;
+    width: 100vw;
+    justify-content: baseline;
+    background-color: white;
+    grid-area: nav;
+    z-index: 5;
+   
+}
+.first{
+ margin-top: 7px;
+ margin-left: 205px;
+ cursor: pointer;
+ opacity: 1;
+ transition: 0.3s;
+}
+.first:hover{
+opacity: 0.6;
+}
+.seventh{
+  background-color:white;
+  border: 1px solid rgb(115, 115, 115);
+    height: 24px;
+    width: 120px;
+    border-radius: 11px;
+    transition: 0.3s;
+    cursor: pointer;
+    padding-left: 9px;
+    opacity: 0.7;
+}
+.seventh:hover{
+    background-color: rgb(239, 241, 241);
+}
+.common{
+    margin-top: 7px;
+ cursor: pointer;
+ opacity: 1;
+ transition: 0.3s;
+}
+.common:hover{
+    opacity: 0.6;
+    background-color: rgb(126, 137, 147);
+}
+.textarea{
+    border: 0.5px light rgb(115, 115, 115);
+    height: 24px;
+    width: 245px;
+    border-radius: 3px;
+}
+.textarea:hover{
+    border: 1.6px solid blue;
+}
+ .addques{
+    background-color: rgb(191, 30, 30);
+    border-radius: 9px;
+    height:28px;
+    width: 140px;
+    color: white;
+   text-align: center;
+   padding-top: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ .addques:hover{
+    background-color: rgb(117, 17, 17);
+ }
+.leftmain{
+    position: fixed;
+    grid-area: left;
+   margin-left: 217px;
+   margin-top: 80px;
+   display: flex;
+   flex-direction: column;
+   gap: 23px;
+   cursor: pointer;
+  
+}
+.leftimages p{
+    opacity: 0.7;
+}
+.leftimages{
+    display: flex;
+    gap: 8px;
+}
+.leftmain a:hover{
+    background-color: rgb(196, 196, 196);
+    height: 90%;
+    width: 100%;
+}
+
+#leftbottom{
+    width: 120px;
+    opacity: 0.5;
+}
+#leftbottom a:hover{
+    text-decoration: underline;
+}
+
+.main{
+    grid-area: main;
+    width: 95%;
+}
+
+.headmain{
+    margin-top: 26px;
+    background-color: white;
+    height: 85px;
+    border-radius: 4px;
+}
+.headmain1{
+    display: flex;
+}
+.Imagem{
+    margin-top: 8px;
+    margin-left: 6px;
+}
+.whatdoyou{
+    margin-top: 8px;
+    margin-left: 12px;
+    background-color: rgb(236, 235, 235);
+    border: 1px solid rgb(115, 115, 115);
+      height: 30px;
+      width: 540px;
+      border-radius: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+      padding-left: 9px;
+      opacity: 0.6;
+     font-size: 17px;
+     padding-top: 5px;
+     padding-left: 10px;
+  }
+  .whatdoyou:hover{
+      background-color: rgb(239, 241, 241);
+  }
+  .headmain2{
+    padding-top: 9px;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0.7;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .headmain2 a:hover{
+    background-color: rgb(239, 241, 241);
+
+  }
+.headdata1{
+    margin-top: 16px;
+    background-color: white;
+    height: auto;
+}
+.headdata1 p{
+    font-size: 16px;
+    opacity: 0.8;
+}
+.votes{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.votes p:hover{
+    text-decoration: underline;
+}
+/* .headdata2{
+    margin-top: 16px;
+    background-color: white;
+    height: 705px;
+    
+}
+.headdata3{
+    margin-top: 16px;
+    background-color:white;
+    height: 705px;
+   
+}  */
+
+.rightmain{
+    grid-area: right;
+    position: fixed;
+    margin-top: 62px;
+    margin-left: 1000px;
+}
+.containerforadd{
+    cursor: pointer;
+    margin-top: 26px;
+    background-color: white;
+    height: 500px;
+    width: 290px;
+    margin: 20px;
+    
+}
+.containerforadd img{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 210px;
+    
+}
+.containerforadd p{
+    cursor: text;
+    text-align: center; 
+    opacity: 0.7;
+   
+}
+
+@media (max-width:600px) {
+   .wrapper{
+    grid-template-rows: 56px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "main";
+   }
+   .leftmain{
+    display: none;
+   }
+   .rightmain{
+    display: none;
+   }
+   #second,#third,#fourth,#fifth,#sixth,.seventh,#mimage,#languageid{
+    display: none;
+   }
+
+}
